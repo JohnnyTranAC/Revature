@@ -33,7 +33,8 @@ function isSpouse(T, M, W) {
                     result[i] = 'NO';
                 }
             }
-            // Check if shorter name's letters between other letters are after the previous
+            // Check if each shorter name's letters come after the previous within longer name
+            // e.g. Case1: Check [0, 1, 2, 4] is true
             var falseOrder = 0;
             for(let b= 0; b<checkOrder.length; b++){
                 if(checkOrder[b+1] - checkOrder[b] <= 0) falseOrder = 1;
